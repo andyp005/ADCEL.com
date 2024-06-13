@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Aplicación</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            position: relative; /* Establecemos el cuerpo como un contexto de posicionamiento para los elementos absolutos dentro de él */
+        }
+
+        .intro-animation {
+            position: relative; /* Agregamos posición relativa para que los elementos posicionados dentro de él se ubiquen de acuerdo a este div */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .welcome-screen {
+            position: absolute; /* Posicionamos el contenedor del botón de manera absoluta */
+            top: 80%; /* Lo ubicamos en la mitad de la altura del cuerpo */
+            left: 0; /* Lo ubicamos en la parte izquierda del cuerpo */
+            width: 100%; /* Establecemos que ocupe el 100% del ancho del cuerpo */
+            transform: translateY(50%); /* Centramos verticalmente el contenedor */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cta-button {
+            background-color: #9B6A9F; /* Color de fondo del botón */
+            color: #fff; /* Color del texto del botón */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none; /* Quitamos la subraya por defecto */
+            display: inline-block; /* Para que el ancho del botón se ajuste al contenido */
+        }
+
+        .cta-button:hover {
+            background-color: #724176; /* Color de fondo del botón al pasar el mouse */
+        }
+    </style>
+</head>
+<body>
+    <div class="intro-animation">
+        <img src="../Imagenes/ADCELA.gif" alt="Animación de Inicio">
+    </div>
+
+    <div class="welcome-screen">
+        <a href="inicio sesion.html" class="cta-button">Comenzar</a>
+    </div>
+</body>
+</html>

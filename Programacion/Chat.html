@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <!-- Agregar enlace a Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex; 
+            flex-direction: column; 
+            min-height: 100vh;
+            position: relative; /* Ajustamos la posición del cuerpo a relativa */
+        }
+        .chat-container {
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            flex: 1;
+        }
+        .chat-title {
+            background-color: #9B6A9F;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin: 0;
+        }
+        .message-container {
+            overflow-y: auto;
+            max-height: calc(90vh - 70px); /* Altura máxima menos la altura de la barra de navegación */
+            padding-bottom: 10px; /* Espacio adicional para evitar que el mensaje esté demasiado cerca del borde inferior */
+        }
+        .message {
+            display: flex;
+            padding: 10px;
+        }
+        .message .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .message .bubble {
+            max-width: 70%;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .message.sent .bubble {
+            background-color: #9B6A9F;
+            color: #fff;
+            align-self: flex-end;
+        }
+        .message.received .bubble {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        .message.received .bubble::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+            border-right: 8px solid #f0f0f0;
+            left: -8px;
+            top: 12px;
+        }
+        .message-input-container {
+            background-color: #f9f9f9;
+            border-top: 1px solid #ccc;
+            width: 100%;
+            padding: 10px;
+            position: fixed;
+            bottom: 50px; /* Ajustamos la posición hacia arriba */
+            left: 0; /* Aseguramos que esté en la esquina izquierda */
+            z-index: 1000; /* Aseguramos que esté encima de la barra de navegación */
+            box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1); /* Agregamos sombra */
+        }
+        .message-input {
+            display: flex;
+            align-items: center;
+        }
+        .message-input input[type="text"] {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            margin-right: 10px;
+            outline: none;
+        }
+        .message-input button {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 20px;
+            background-color: #9B6A9F;
+            color: #fff;
+            cursor: pointer;
+            outline: none;
+        }
+        .message-input button:hover {
+            background-color: #724176;
+        }
+        /* Estilo para la barra inferior */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #9B6A9F;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            z-index: 999; /* Asegura que esté en la parte superior */
+        }
+        .bottom-nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <h1 class="chat-title">ADCEL</h1>
+        <div class="message-container">
+            <!-- Mensajes anteriores -->
+            <div class="message received">
+                <img src="../Imagenes/ADCELH.png" alt="Avatar" class="avatar">
+              <div class="bubble">
+                <p>ADCEL</p>
+                    <p>¡Hola! ¿En qué puedo ayudarte hoy?</p>
+                    <small>09:55 am</small>
+                </div>
+            </div>
+            <div class="message sent">
+              <div class="bubble">
+                <p>Sara Ortiz&nbsp;</p>
+                  <p>Hola, estoy interesada en aprender cómo desdoblar objetos en Maya.</p>
+                  <small>09:55 am</small>
+                </div>
+              <img src="../Imagenes/esencia-de-una-persona.jpg" alt="Avatar" class="avatar">
+            </div>
+            <!-- Nuevos mensajes -->
+            <div class="message received">
+                <img src="../Imagenes/ADCELP.png" alt="Avatar" class="avatar">
+                <div class="bubble">
+                    <p>ADCEL</p>
+                    <p>Claro, desdoblar objetos en Maya es una técnica útil. ¿Qué tipo de objeto deseas desdoblar?</p>
+                    <small>09:55 am</small>
+              </div>
+            </div>
+            <div class="message sent">
+              <div class="bubble">
+                <p>Sara Ortiz</p>
+                  <p>Quiero desdoblar una esfera para crear una textura compleja.</p>
+                  <small>09:55 am</small>
+                </div>
+              <img src="../Imagenes/esencia-de-una-persona.jpg" alt="Avatar" class="avatar">
+            </div>
+            <!-- Nuevos mensajes adicionales -->
+          <div class="message received">
+                <img src="../Imagenes/ADCELH.png" alt="Avatar" class="avatar">
+                <div class="bubble">
+                    <p>ADCEL</p>
+                    <p>Entiendo. Para desdoblar una esfera en Maya, primero selecciona la esfera y luego ve a UV &gt; Planar Mapping.</p>
+                    <small>10:00 am</small>
+                </div>
+            </div>
+            <div class="message sent">
+              <div class="bubble">
+                <p>Sara Ortiz</p>
+                  <p>¿Y luego qué debo hacer?</p>
+                  <small>10:05 am</small>
+                </div>
+              <img src="../Imagenes/esencia-de-una-persona.jpg" alt="Avatar" class="avatar">
+            </div>
+        </div>
+    </div>
+    <!-- Message Input -->
+    <div class="message-input-container">
+        <div class="message-input">
+            <input type="text" placeholder="Escribe tu mensaje...">
+            <button>Enviar</button>
+        </div>
+    </div>
+    <!-- Barra inferior -->
+    <div class="bottom-nav">
+        <a href="chat.html"><i class="fas fa-envelope"></i></a>
+        <a href="comunidad.html"><i class="fas fa-user"></i></a>
+        <a href="perfil información.html"><i class="fas fa-user-circle"></i></a>
+    </div>
+</body>
+</html>

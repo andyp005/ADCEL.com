@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantalla de publicación</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Estilos generales */
+        body {
+            background-color: #f0f0f0;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        /* Contenedor de publicación */
+        .contenedor-publicacion {
+            width: 90%;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        /* Cabecera de la publicación */
+        .cabecera-publicacion {
+            width: 100%;
+            padding: 15px;
+            border-radius: 5px 5px 0 0;
+            text-align: center;
+            background-color: #9B6A9F;
+        }
+        
+        .cabecera-publicacion h2 {
+            margin: 0;
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+        }
+        
+        /* Cuerpo de la publicación */
+        .cuerpo-publicacion {
+            width: 100%;
+            padding: 20px 0;
+        }
+        
+        #texto-publicacion {
+            width: 100%;
+            height: 500px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        
+        .contenedor-botones {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .boton {
+            background-color: #9B6A9F;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 15px 30px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        
+        .boton:hover {
+            background-color: #724176;
+        }
+        
+        input[type="file"] {
+            display: none;
+        }
+        
+        label {
+            cursor: pointer;
+            background-color: #9B6A9F;
+            color: #fff;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        
+        label:hover {
+            background-color: #724176;
+        }
+        
+        /* Barra de navegación */
+        .bottom-nav {
+            background-color: #9B6A9F;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+        }
+
+        .bottom-nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+
+        .bottom-nav a:hover {
+            color: #724176;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="contenedor-publicacion">
+        <div class="cabecera-publicacion">
+            <h2>Ayuda a Camilo</h2>
+        </div>
+        <div class="cuerpo-publicacion">
+            <textarea id="texto-publicacion" placeholder="¿Qué estás pensando?"></textarea>
+            <div class="contenedor-botones">
+                <label for="foto">Subir Foto/video</label>
+                <input type="file" id="foto" accept="image/*">
+                <label for="video">Subir Recursos</label>
+                <input type="file" id="video" accept="video/*">
+                <button class="boton" id="btn-publicar">Publicar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-nav">
+        <a href="chat.html"><i class="fas fa-envelope"></i></a>
+        <a href="comunidad.html"><i class="fas fa-user"></i></a>
+        <a href="perfil_informacion.html"><i class="fas fa-user-circle"></i></a>
+    </div>
+</body>
+</html>

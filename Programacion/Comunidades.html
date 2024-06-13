@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explora</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            height: 100%;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-container {
+            width: 200px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .title {
+            font-size: 24px;
+            color: #9B6A9F;
+            margin: 20px 0 10px 0;
+			font-weight: bold;
+        }
+		
+        .subtitle {
+            font-size: 18px;
+            color: #333;
+            margin: 10px 0;
+			padding: 5px 40px;
+        }
+
+        .text {
+            font-size: 16px;
+            color: #666;
+            margin: 10px 0;
+            padding: 0 20px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .button-primary {
+            background-color: #9B6A9F;
+            color: #fff;
+        }
+		.button-primary:hover {
+            background-color: #724176;
+        }
+
+        .button-secondary {
+            background-color: #e0e0e0;
+            color: #333;
+        }
+
+        .progress-dots {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            margin-top: 20px;
+        }
+
+        .progress-dots .dot {
+            width: 10px;
+            height: 10px;
+            background-color: #e0e0e0;
+            border-radius: 50%;
+        }
+
+        .progress-dots .dot.active {
+            background-color: #9B6A9F;
+        }
+
+        .footer-text {
+            font-size: 14px;
+            color: #666;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+                justify-content: flex-start;
+            }
+
+            .title {
+                font-size: 20px;
+            }
+
+            .subtitle {
+                font-size: 16px;
+            }
+
+            .text {
+                font-size: 14px;
+            }
+
+            .button {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+
+            .progress-dots .dot {
+                width: 8px;
+                height: 8px;
+            }
+
+            .footer-text {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+            <img src="../Imagenes/ADCELH.png" alt="Imagen de ejemplo">
+        </div>
+        <div class="title">¡Has parte de una comunidad!</div>
+        <div class="subtitle">¡Crea contacto con personas creativas como tu!</div>
+        <div class="text">Tenemos la mejor comunidad que se apegue a tus intereses como preofesional, estudiante o creativo</div>
+		
+        <div class="buttons">
+            <a href="Ayuda.html" class="button button-primary">Siguiente</a>
+            <a href="Que quieres hacer.html" class="button button-secondary">Saltar</a>
+        </div>
+        <div class="progress-dots">
+            <div class="dot"></div>
+            <div class="dot active"></div> <!--men solo es poner (dot active) al que quiere que se active y ya-->
+            <div class="dot"></div>
+        </div>
+        <div class="footer-text">menos bloqueos MÁS INSPIRACIÓN</div>
+    </div>
+</body>
+</html>
