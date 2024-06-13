@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Enlace a Font Awesome -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .profile-container {
+            background-color: #fff;
+			height: 100%;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .cover-photo {
+            width: 110%;
+            height: 150px;
+            background-color: #D0D0D0; /* Color de fondo del rectángulo detrás */
+            margin-bottom: 20px;
+        }
+
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid #fff; /* Borde blanco alrededor del círculo */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: -75px; /* Posiciona el círculo sobre el cuadrado de arriba */
+        }
+
+        .profile-info {
+            margin-bottom: 20px;
+        }
+
+        .profile-info h2 {
+            margin-bottom: 5px;
+        }
+
+        .specialization {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-icons a {
+            color: #333;
+            font-size: 24px;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .contact-icons a:hover {
+            color: #007bff;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Mostrar tres imágenes por fila */
+            gap: 5px; /* Espacio entre las imágenes */
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #ddd; /* Borde delgado */
+            border-radius: 3px; /* Borde redondeado */
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05); /* Efecto de escala al pasar el mouse */
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .button-group button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #9B6A9F;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 0 10px;
+        }
+
+        .button-group button:hover {
+            background-color: #724176;
+        }
+		
+		/*barra navegacion inferior*/
+		
+		.main-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .bottom-nav {
+            background-color: #9B6A9F;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 20px;
+			width: 100%;
+        }
+
+        .bottom-nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+
+        .bottom-nav a:hover {
+            color: #dcdcdc;
+        }
+
+        /* Estilos para hacer que el perfil sea responsive */
+        @media screen and (max-width: 600px) {
+            .profile-picture {
+                width: 100px; /* Reducir el tamaño del círculo */
+                height: 100px;
+                margin-top: -80px; /* Posiciona el círculo sobre el cuadrado de arriba */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <div class="cover-photo"></div>
+        <div class="profile-picture">
+            <img src="tu_imagen.jpg" alt="Foto de Perfil"> <!-- Reemplaza "tu_imagen.jpg" con la ruta de tu imagen de perfil -->
+        </div>
+        <div class="profile-info">
+            <h2>Camilo Pardo</h2>
+            <p>Diseñador Gráfico</p>
+            <p class="specialization">Especialización</p>
+        </div>
+        <div class="button-group">
+            <button>Preguntas</button>
+            <button>Información</button>
+            <button>Respuestas</button>
+        </div>
+        <div class="contact-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-behance"></i></a>
+        </div>
+        <div class="gallery">
+            <img src="../Imagenes/bola e3.jpeg" alt="Imagen 1"> <!-- Reemplaza "imagen1.jpg" con la ruta de tu primera imagen -->
+            <img src="../Imagenes/plaza voxel.jpeg" alt="Imagen 2"> <!-- Reemplaza "imagen2.jpg" con la ruta de tu segunda imagen -->
+            <img src="../Imagenes/gato 3d.jpeg" alt="Imagen 3"> <!-- Reemplaza "imagen3.jpg" con la ruta de tu tercera imagen -->
+            <img src="../Imagenes/cartagena vox.jpeg" alt="Imagen 1"> <!-- Reemplaza "imagen1.jpg" con la ruta de tu primera imagen -->
+            <img src="../Imagenes/florero vox.jpeg" alt="Imagen 2"> <!-- Reemplaza "imagen2.jpg" con la ruta de tu segunda imagen -->
+            <img src="../Imagenes/Mesa de trabajo 18-100.jpg" alt="Imagen 3"> <!-- Reemplaza "imagen3.jpg" con la ruta de tu tercera imagen -->
+        </div>
+		
+		<!--barra navegacion inferior-->
+		
+		<div class="main-content">
+		</div>
+		<div class="bottom-nav">
+			<a href="chat.html"><i class="fas fa-envelope"></i></a>
+			<a href="comunidad.html"><i class="fas fa-user"></i></a>
+			<a href="perfil información.html"><i class="fas fa-user-circle"></i></a>
+		</div>
+    </div>
+</body>
+</html>

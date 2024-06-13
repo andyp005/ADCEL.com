@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .community-container {
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
+    .community-header {
+      text-align: center;
+      margin-bottom: 20px;
+      padding: 10px 0;
+    }
+
+    .community-header h1 {
+      font-size: 24px;
+      margin-bottom: 0;
+    }
+
+    .community-header a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .community-header button {
+      background-color: #9B6A9F;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+	  
+	  .community-header button:hover {
+            background-color: #724176;
+		  }
+	  
+    .community-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .community-list-item {
+      position: relative;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      width: calc(50% - 20px);
+    }
+
+    .community-list-item h2 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .community-list-item p {
+      font-size: 14px;
+      color: #808080;
+      margin-bottom: 0;
+    }
+
+    .reply-button {
+      position: absolute;
+      top: 20px;
+      right: 10px;
+      background-color: #9B6A9F;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none; /* Elimina el subrayado */
+    }
+	  
+	  .reply-button:hover {
+            background-color: #724176;
+			}
+
+    .reply-button a {
+      color: inherit; /* Hereda el color del texto del botón */
+      text-decoration: none; /* Elimina el subrayado */
+    }
+
+    .bottom-nav {
+      background-color: #9B6A9F;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+    }
+
+    .bottom-nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 24px;
+      transition: color 0.3s ease;
+    }
+
+    .bottom-nav a:hover {
+      color: #724176;
+    }
+
+    @media screen and (max-width: 768px) {
+      .community-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .community-header button {
+        margin-top: 10px;
+      }
+
+      .community-list {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .community-list-item {
+        width: 100%;
+      }
+    }
+  .boton-filtro {
+}
+  </style>
+</head>
+<body>
+  <div class="community-container">
+    <div class="community-header">
+      <h1>Comunidad</h1>
+      <a href="filtros.html"><button class="boton-filtro">Filtro</button></a>
+    </div>
+
+    <div class="community-list">
+      <div class="community-list-item">
+        <h2>Diseño Gráfico</h2>
+        <p>Como puedo quitar un fondo en Photoshop?</p>
+        <button class="reply-button"><a href="Nueva publicación.html">Reply</a></button>
+      </div>
+      <div class="community-list-item">
+        <h2>Fotografía</h2>
+        <p>¿Que es un filtro LUT?</p>
+        <button class="reply-button"><a href="Nueva publicación.html">Reply</a></button>
+      </div>
+      <div class="community-list-item">
+        <h2>Motion Graphics</h2>
+        <p>¿Como puedo exportar para redes sociales?</p>
+        <button class="reply-button"><a href="Nueva publicación.html">Reply</a></button>
+      </div>
+      <div class="community-list-item">
+        <h2>Ilustración</h2>
+        <p>¿Donde puedo encontrar pinceles?</p>
+        <button class="reply-button"><a href="Nueva publicación.html">Reply</a></button>
+      </div>
+      <div class="community-list-item">
+        <h2>Animación</h2>
+        <p>Como realizo un rigging</p>
+        <button class="reply-button"><a href="Nueva publicación.html">Reply</a></button>
+      </div>
+      <div class="community-list-item">
+        <h2>Diseño Web</h2>
+        <p>¿Para que son los prototipos de baja fidelidad?</p>
+        <button class="reply-button"><a href="Nueva publicación.html">Reply</a></button>
+      </div>
+      <div class="community-list-item">
+        <h2>Editorial</h2>
+        <p>¿Que son los glifos?</p>
+        <button class="reply-button"><a href="Nueva publicación.html">Reply</a></button>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-nav">
+    <a href="chat.html"><i class="fas fa-envelope"></i></a>
+    <a href="comunidad.html"><i class="fas fa-user"></i></a>
+    <a href="perfil_informacion.html"><i class="fas fa-user-circle"></i></a>
+  </div>
+</body>
+</html>
